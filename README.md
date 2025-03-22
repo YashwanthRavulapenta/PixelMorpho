@@ -79,22 +79,11 @@ This project uses Google Custom Search API. For production use, replace the plac
 
 ---
 
-## 📸 Screenshots
-
-> *Coming Soon!*
-
----
 
 ## 📬 Contact
 
 For feature requests, ideas, or contributions, feel free to open an issue or reach out!
 
----
-
-## ⭐ Credits
-
-Made with ❤️ by [Your Name]  
-Inspired by creative image editing needs — designed for speed, simplicity, and visual flow.
 
 ---
 
