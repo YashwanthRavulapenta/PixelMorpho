@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>PixelMorpho - Image Uploader & Resizer</title>
+  <title>PixelMorpho</title>
   <link rel="stylesheet" href="resizer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous"
    referrerpolicy="no-referrer" />
+   <link rel="icon" href="PixelMorpho.png" type="image/png" />
 </head>
 <body>
+  
   <h2>Pixel<span id="morpho">Morpho</span></h2>
 
   <p class="tagline">
@@ -26,7 +28,6 @@
   </p>
 
   <div class="container">
-    <!-- Reference Image Upload -->
     <div class="upload-box">
       <div class="upload-title">📌Upload Sample Image</div>
       <label for="img1" class="custom-btn">
@@ -36,20 +37,16 @@
       <div class="image-list single" id="img1-preview"></div>
     </div>
 
-    <!-- Multi Image Upload + URL + Drag/Drop -->
     <div class="upload-box">
       <div class="upload-title"> Upload Images (Max 6)</div>
 
-      <!-- Upload File -->
       <label for="img2" class="custom-btn" id="uploadImagesBtn">
         <i class="fa-regular fa-image"></i> Upload Image
       </label>
       <input type="file" id="img2" multiple accept="image/*" />
 
-      <!-- OR Text -->
       <p class="or_text">OR</p>
 
-      <!-- URL Upload -->
       <div class="url-upload">
         <input type="text" id="imageUrl" placeholder="Search Images.." />
         <button id="submitUrl">Add</button>
@@ -57,23 +54,20 @@
 
       <p class="or_text">OR</p>
 
-     <!-- Compact Drag & Drop -->
 <div class="drop-area compact" id="dropArea" title="Drag and drop image or image URL">
   📥 Drop image or link here
 </div>
 
-      <!-- Image Preview -->
+ 
       <div class="image-list grid" id="img2-preview"></div>
 
-      <!-- Add More (Hidden Initially) -->
       <div class="add-more hidden" id="addMoreBtn" onclick="document.getElementById('img2').click()">+ Add More</div>
 
-      <!-- Convert All Button -->
+    
       <button class="convert-btn" onclick="convertAll()"><i class="fa-solid fa-gears"></i> Convert All</button>
     </div>
   </div>
 
-  <!-- Toast Notification -->
   <div id="toast"></div>
 
   <script src="resizer.js"></script>

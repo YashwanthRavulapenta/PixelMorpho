@@ -1,4 +1,3 @@
-/* Base Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -11,7 +10,6 @@ body {
   min-height: 100vh;
 }
 
-/* Animate background gradient */
 @keyframes bgAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -34,7 +32,6 @@ h2 {
   margin: auto;
 }
 
-/* Upload Box */
 .upload-box {
   background: rgba(255, 255, 255, 0.05);
   padding: 25px;
@@ -56,7 +53,6 @@ h2 {
   color: #eeeeee;
 }
 
-/* File Upload Button */
 input[type="file"] {
   display: none;
 }
@@ -80,7 +76,6 @@ input[type="file"] {
   box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
 }
 
-/* URL Upload */
 .url-upload {
   display: flex;
   gap: 10px;
@@ -119,7 +114,6 @@ input[type="file"] {
   transform: scale(1.05);
 }
 
-/* Image List */
 .image-list {
   display: flex;
   gap: 15px;
@@ -132,7 +126,6 @@ input[type="file"] {
   justify-content: center;
 }
 
-/* Image Preview */
 .image-preview {
   position: relative;
   border: 2px solid rgba(255,255,255,0.1);
@@ -160,7 +153,6 @@ input[type="file"] {
   transform: scale(1.03);
 }
 
-/* Buttons on Image */
 .image-preview .btns {
   position: absolute;
   top: 6px;
@@ -184,7 +176,7 @@ input[type="file"] {
   background: rgba(0,0,0,0.8);
 }
 
-/* Converted Checkmark */
+
 .checkmark {
   position: absolute;
   top: 6px;
@@ -201,7 +193,6 @@ input[type="file"] {
 }
 
 
-/* Convert Button */
 .convert-btn {
   background: linear-gradient(135deg, #f7d33d, #e9c70a);
   color: #2c2c2c;
@@ -223,7 +214,6 @@ input[type="file"] {
 }
 
 
-/* Toast */
 #toast {
   position: fixed;
   bottom: 30px;
@@ -239,12 +229,10 @@ input[type="file"] {
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-/* Hidden */
 .hidden {
   display: none !important;
 }
 
-/* Mobile Responsive */
 @media (max-width: 600px) {
   .image-list {
     flex-direction: column;
@@ -255,7 +243,6 @@ input[type="file"] {
   }
 }
 
-/* OR Text */
 .or_text {
   text-align: center;
   color: #ccc;
