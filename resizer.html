@@ -2,39 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Image Uploader & Resizer</title>
+  <title>PixelMorpho - Image Uploader & Resizer</title>
   <link rel="stylesheet" href="resizer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous"
+   referrerpolicy="no-referrer" />
 </head>
 <body>
-  <h2>📷 Image Uploader & Resizer</h2>
+  <h2>Pixel<span id="morpho">Morpho</span></h2>
+  <p class="tagline">
+    What is this? <span class="info-hover">Describe
+      <span class="popup-desc">
+        PixelMorpho is a smart image uploader and resizer tool.
+        <br><br>
+        ➤ Upload a reference image (sample).<br>
+        ➤ Upload up to 6 images or paste image URLs.<br>
+        ➤ All uploaded images will be resized to match the reference image.<br>
+        ➤ Download the resized images directly.<br><br>
+        No quality loss. Fast. Simple. Perfect for batch editing.
+      </span>
+    </span>
+  </p>
 
   <div class="container">
     <!-- Reference Image Upload -->
     <div class="upload-box">
       <div class="upload-title">📌 Upload Sample Image</div>
-      <label for="img1" class="custom-btn">Upload Reference</label>
+      <label for="img1" class="custom-btn">
+        <i class="fa-regular fa-image"></i> Upload
+      </label>
       <input type="file" id="img1" accept="image/*" />
       <div class="image-list single" id="img1-preview"></div>
     </div>
 
-    <!-- Multi Image Upload + URL -->
+    <!-- Multi Image Upload + URL + Drag/Drop -->
     <div class="upload-box">
       <div class="upload-title">🖼️ Upload More Images (Max 6)</div>
 
-      <!-- File Upload -->
-      <label for="img2" class="custom-btn" id="uploadImagesBtn">Upload Image</label>
+      <!-- Upload File -->
+      <label for="img2" class="custom-btn" id="uploadImagesBtn">
+        <i class="fa-regular fa-image"></i> Upload Image
+      </label>
       <input type="file" id="img2" multiple accept="image/*" />
+
+      <!-- OR Text -->
       <p class="or_text">OR</p>
+
       <!-- URL Upload -->
       <div class="url-upload">
-        <input type="text" id="imageUrl" placeholder="Paste Image Address... " />
-        <button id="submitUrl">add</button>
+        <input type="text" id="imageUrl" placeholder="Search Images.." />
+        <button id="submitUrl">Add</button>
       </div>
+
+      <p class="or_text">OR</p>
+
+     <!-- Compact Drag & Drop -->
+<div class="drop-area compact" id="dropArea" title="Drag and drop image or image URL">
+  📥 Drop image or link here
+</div>
 
       <!-- Image Preview -->
       <div class="image-list grid" id="img2-preview"></div>
 
-      <!-- Add More Button -->
+      <!-- Add More (Hidden Initially) -->
       <div class="add-more hidden" id="addMoreBtn" onclick="document.getElementById('img2').click()">+ Add More</div>
 
       <!-- Convert All Button -->

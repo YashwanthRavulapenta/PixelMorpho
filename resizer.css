@@ -25,6 +25,7 @@ h2 {
   text-shadow: 1px 1px 2px #000;
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -59,6 +60,7 @@ h2 {
 input[type="file"] {
   display: none;
 }
+
 
 .custom-btn {
   display: inline-block;
@@ -194,25 +196,32 @@ input[type="file"] {
   padding: 3px 7px;
   box-shadow: 0 0 8px #00c853;
 }
+#morpho {
+  color: rgb(225, 174, 32);
+}
+
 
 /* Convert Button */
 .convert-btn {
-  background: linear-gradient(135deg, #ff6f00, #ff8800);
-  color: white;
+  background: linear-gradient(135deg, #f7d33d, #e9c70a);
+  color: #2c2c2c;
   border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
+  padding: 10px 18px;
+  border-radius: 8px;
   cursor: pointer;
   margin-top: 14px;
-  font-weight: 500;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 15px rgba(255, 136, 0, 0.4);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .convert-btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #ffa000, #ff7043);
+  background: linear-gradient(135deg, #ffe164, #e4c801);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
+
 
 /* Toast */
 #toast {
@@ -253,4 +262,61 @@ input[type="file"] {
   font-size: 13px;
   opacity: 0.8;
   margin: 10px 0;
+}
+.tagline {
+  text-align: center;
+  margin-top: -10px;
+  font-size: 1rem;
+  color: #f4f0f0;
+  position: relative;
+}
+
+.info-hover {
+  color: #4094ef;
+  cursor: pointer;
+  position: relative;
+  text-decoration: underline;
+}
+
+.popup-desc {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+.info-hover:hover .popup-desc {
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+  transition: background 0.3s, border 0.3s;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.drop-area.dragover {
+  background-color: #f0f9ff;
+  border-color: #00bcd4;
+  color: #00bcd4;
 }
