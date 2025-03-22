@@ -272,7 +272,7 @@ input[type="file"] {
 }
 
 .info-hover {
-  color: #4094ef;
+  color: #f46405;
   cursor: pointer;
   position: relative;
   text-decoration: underline;

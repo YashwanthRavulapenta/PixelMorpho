@@ -10,13 +10,14 @@
 </head>
 <body>
   <h2>Pixel<span id="morpho">Morpho</span></h2>
+
   <p class="tagline">
-    What is this? <span class="info-hover">Describe
+    How it works? <span class="info-hover">Describe
       <span class="popup-desc">
         PixelMorpho is a smart image uploader and resizer tool.
         <br><br>
         ➤ Upload a reference image (sample).<br>
-        ➤ Upload up to 6 images or paste image URLs.<br>
+        ➤ Upload up to Max 6 images or search images or drop images.<br>
         ➤ All uploaded images will be resized to match the reference image.<br>
         ➤ Download the resized images directly.<br><br>
         No quality loss. Fast. Simple. Perfect for batch editing.
@@ -27,7 +28,7 @@
   <div class="container">
     <!-- Reference Image Upload -->
     <div class="upload-box">
-      <div class="upload-title">📌 Upload Sample Image</div>
+      <div class="upload-title">📌Upload Sample Image</div>
       <label for="img1" class="custom-btn">
         <i class="fa-regular fa-image"></i> Upload
       </label>
@@ -37,7 +38,7 @@
 
     <!-- Multi Image Upload + URL + Drag/Drop -->
     <div class="upload-box">
-      <div class="upload-title">🖼️ Upload More Images (Max 6)</div>
+      <div class="upload-title"> Upload Images (Max 6)</div>
 
       <!-- Upload File -->
       <label for="img2" class="custom-btn" id="uploadImagesBtn">
@@ -68,7 +69,7 @@
       <div class="add-more hidden" id="addMoreBtn" onclick="document.getElementById('img2').click()">+ Add More</div>
 
       <!-- Convert All Button -->
-      <button class="convert-btn" onclick="convertAll()">🔁 Convert All</button>
+      <button class="convert-btn" onclick="convertAll()"><i class="fa-solid fa-gears"></i> Convert All</button>
     </div>
   </div>
 

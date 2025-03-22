@@ -207,10 +207,10 @@ function showToast(msg) {
 }
 
 // 🔁 Reset Upload Button Text
-function resetSubmitBtn(msg = "Upload from URL") {
+function resetSubmitBtn(msg = "Add") {
   submitUrlBtn.innerText = msg;
   setTimeout(() => {
-    submitUrlBtn.innerText = "Upload from URL";
+    submitUrlBtn.innerText = "Add";
     submitUrlBtn.disabled = false;
   }, 1500);
 }
