@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Image Uploader & Resizer</title>
+  <link rel="stylesheet" href="resizer.css" />
+</head>
+<body>
+  <h2>📷 Image Uploader & Resizer</h2>
+
+  <div class="container">
+    <!-- Reference Image Upload -->
+    <div class="upload-box">
+      <div class="upload-title">📌 Upload Sample Image</div>
+      <label for="img1" class="custom-btn">Upload Reference</label>
+      <input type="file" id="img1" accept="image/*" />
+      <div class="image-list single" id="img1-preview"></div>
+    </div>
+
+    <!-- Multi Image Upload + URL -->
+    <div class="upload-box">
+      <div class="upload-title">🖼️ Upload More Images (Max 6)</div>
+
+      <!-- File Upload -->
+      <label for="img2" class="custom-btn" id="uploadImagesBtn">Upload Image</label>
+      <input type="file" id="img2" multiple accept="image/*" />
+      <p class="or_text">OR</p>
+      <!-- URL Upload -->
+      <div class="url-upload">
+        <input type="text" id="imageUrl" placeholder="Paste Image Address... " />
+        <button id="submitUrl">add</button>
+      </div>
+
+      <!-- Image Preview -->
+      <div class="image-list grid" id="img2-preview"></div>
+
+      <!-- Add More Button -->
+      <div class="add-more hidden" id="addMoreBtn" onclick="document.getElementById('img2').click()">+ Add More</div>
+
+      <!-- Convert All Button -->
+      <button class="convert-btn" onclick="convertAll()">🔁 Convert All</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast"></div>
+
+  <script src="resizer.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* Base Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: bgAnimation 15s ease infinite;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* Animate background gradient */
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 960px;
+  margin: auto;
+}
+
+/* Upload Box */
+.upload-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.upload-box:hover {
+  transform: translateY(-4px);
+}
+
+.upload-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #eeeeee;
+}
+
+/* File Upload Button */
+input[type="file"] {
+  display: none;
+}
+
+.custom-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 12px 0;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+}
+
+.custom-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+}
+
+/* URL Upload */
+.url-upload {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.url-upload input {
+  padding: 10px;
+  flex: 1;
+  min-width: 240px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+}
+
+.url-upload input::placeholder {
+  color: #ccc;
+}
+
+.url-upload button {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #00c851, #007e33);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.url-upload button:hover {
+  background: linear-gradient(135deg, #00e676, #00c853);
+  transform: scale(1.05);
+}
+
+/* Image List */
+.image-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.image-list.single {
+  justify-content: center;
+}
+
+/* Image Preview */
+.image-preview {
+  position: relative;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 170px;
+  height: auto;
+  background: rgba(255,255,255,0.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-preview:hover img {
+  transform: scale(1.03);
+}
+
+/* Buttons on Image */
+.image-preview .btns {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+.image-preview button {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 5px 7px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.image-preview button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Converted Checkmark */
+.checkmark {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 18px;
+  background: #00c853;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  box-shadow: 0 0 8px #00c853;
+}
+
+/* Convert Button */
+.convert-btn {
+  background: linear-gradient(135deg, #ff6f00, #ff8800);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 136, 0, 0.4);
+}
+
+.convert-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ffa000, #ff7043);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 8px;
+  display: none;
+  z-index: 999;
+  font-size: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Hidden */
+.hidden {
+  display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .image-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .url-upload {
+    flex-direction: column;
+  }
+}
+
+/* OR Text */
+.or_text {
+  text-align: center;
+  color: #ccc;
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 10px 0;
+}
